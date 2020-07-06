@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mob=findViewById(R.id.MobieNo);
+        setTitle("Login");
 
         String permission = Manifest.permission.RECEIVE_SMS;
         int grant = ContextCompat.checkSelfPermission(this, permission);
@@ -161,7 +162,9 @@ public class MainActivity extends AppCompatActivity  {
         @Override
         public void onVerificationFailed(FirebaseException e) {
             Toast.makeText(MainActivity.this,"Something Went Wrong" ,Toast.LENGTH_LONG).show();
-
+            if(progressDialog.isShowing()){
+                progressDialog.dismiss();
+            }
         }
     };
 

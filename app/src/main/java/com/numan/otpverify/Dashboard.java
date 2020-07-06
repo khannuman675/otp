@@ -23,6 +23,7 @@ public class Dashboard extends AppCompatActivity {
         TextView e=findViewById(R.id.user);
         e.setText("Welcome "+user.getPhoneNumber());
         Button b=findViewById(R.id.logout);
+        setTitle("Dashboard");
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

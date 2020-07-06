@@ -49,7 +49,7 @@ public class Verifypage extends AppCompatActivity implements MessageListener{
         Mob = getIntent().getExtras().getString("mobile");
         verificationId = getIntent().getExtras().getString("OTP");
         //end temp
-
+        setTitle("OTP");
 
 
         mobile=(TextView)findViewById(R.id.place);
